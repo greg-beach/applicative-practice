@@ -10,7 +10,14 @@
 
 
 export function find(array, callback) {
-  // Your code goes here...
+  let found = [];
+  for (let element of array){
+    if (callback(element)){
+      found.push(element);
+      break;
+    };
+  };
+  return found[0];
   
 }
 
