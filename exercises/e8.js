@@ -9,11 +9,10 @@ export function findPlanetNameByMoon(data, moonName) {
   .filter(function(planet){
     return planet.hasOwnProperty('moons');
   })
-  .find(planet => planet.moons.includes(moonName))
-  .map(function(planet){
-    return planet.name;
+  .find(function(planet){
+    return planet.moons.includes(moonName);
   });
-return planets;
+return planets.name;
 }
 
 
